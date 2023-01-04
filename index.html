@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="CSS/main.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<h1 class="header__title">The Time Tracker</h1>
+				<h2 class="header__sub-title">/ &copy; A Mind-Boggling Project /</h2>
+			</header>
+			<form class="form-dialog" id="task-form">
+				<input
+					type="text"
+					placeholder="What are you working on?"
+					name="search"
+					id="task-input"
+					class="search"
+				/>
+				<input
+					id="task-submit"
+					type="submit"
+					value="Add Task"
+					class="btn btn--transparent"
+				/>
+			</form>
+			<main class="main">
+				<h1 class="main__title">Tasks</h1>
+				<!--TAK-LIST-->
+				<ul class="task">
+					<!--TASK-->
+					<li class="task-item hide">
+						<!--CONTENT INPUT-->
+						<input readonly  class="task__title">Count-Up Timer</input>
+						<!--Counter-->
+						<div class="task__panel">
+							<!--TIME font-lg-->
+							<span class="task__timer">00:00:00</span>
+							<!--Controls-->
+							<div class="task__controller">
+								<a href="#" class="btn btn--orange start">Start</a>
+								<a href="#" class="btn btn--orange stop">Stop</a>
+								<a href="#" class="btn btn--orange reset">Reset</a>
+							</div>
+						</div>
+						<!--ACTIONS-->
+						<div class="task__footer">
+							<a href="#" class="btn btn--transparent edit">End Task</a>
+							<a href="#" class="btn btn--red delete">Delete Task</a>
+						</div>
+					</li>
+				</ul>
+			</main>
+		</div>
+		<script src="scripts/js.js"></script>
+	</body>
+</html>

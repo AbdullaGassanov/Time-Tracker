@@ -1,0 +1,160 @@
+$color-darken-green: #3343b8;
+$color-dark-green: #444cf2;
+$color-red: #a90f2d;
+$color-orange: #e96d33;
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+
+	font-size: 62.5%; //1rem = 10px , 10px/16px = 62.5%
+}
+
+body {
+	box-sizing: border-box;
+
+	background-color: $color-dark-green;
+	font-family: sans-serif;
+	color: #fff;
+}
+
+.container {
+	max-width: 60rem;
+	margin: 3rem auto;
+}
+
+.header {
+	text-align: center;
+	width: 100%;
+
+	&__title,
+	&__sub-title {
+		margin-bottom: 2rem;
+		color: #fff;
+	}
+}
+
+.form-dialog {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.search {
+	border: 1px solid white;
+	padding: 0.8rem;
+	flex: 1;
+	margin-right: 0.5rem;
+	background-color: $color-darken-green;
+	border-radius: 5px;
+	color: #fff;
+
+	&::placeholder {
+		opacity: 0.6;
+		color: #fff;
+	}
+}
+
+.btn {
+	padding: 0.7rem 1rem;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.4s;
+
+	&--red {
+		background-color: $color-red;
+	}
+
+	&--transparent {
+		background-color: transparent;
+		border: 1px solid #fff;
+	}
+
+	&--orange {
+		background-color: $color-orange;
+	}
+
+	&:not(:last-child) {
+		margin-right: 1rem;
+	}
+
+	&:hover {
+		background-color: rgba(91, 105, 160, 0.668);
+	}
+}
+
+.main {
+	padding: 1rem 0;
+	margin: 1rem 0;
+	&__title {
+		margin: 1rem 0;
+	}
+}
+
+.task {
+	list-style: none;
+
+	&-item {
+		background-color: $color-darken-green;
+		border-radius: 5px;
+		padding: 3rem;
+		margin: 1rem 0;
+	}
+
+	&__panel {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 2rem 0;
+	}
+
+	&__title {
+		color: #fff;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		width: 100%;
+		padding-bottom: 0.5rem;
+		transition: 0.2s;
+
+		&:focus {
+			border-bottom: 1px solid rgba(255, 255, 255, 0.479);
+			width: 100%;
+		}
+	}
+
+	&__timer {
+		color: #fff;
+		font-size: 1.2rem;
+	}
+
+	&__controller {
+		display: flex;
+		justify-content: space-between;
+
+		&-item {
+			&:not(:last-child) {
+				margin-right: 1rem;
+			}
+		}
+	}
+
+	&__footer {
+		padding-top: 1rem;
+		text-align: center;
+	}
+}
+
+.hide {
+	display: none;
+}
